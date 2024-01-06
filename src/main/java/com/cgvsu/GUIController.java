@@ -2,6 +2,8 @@ package com.cgvsu;
 
 import com.cgvsu.Math.Vectors.ThreeDimensionalVector;
 import com.cgvsu.Math.Vectors.TwoDimensionalVector;
+import com.cgvsu.deleter.PolygonsDeleter;
+import com.cgvsu.deleter.VerticesDeleter;
 import com.cgvsu.exceptions.NullModelException;
 import com.cgvsu.model.Model;
 import com.cgvsu.objreader.IncorrectFileException;
@@ -30,6 +32,7 @@ import java.io.IOException;
 import java.nio.charset.MalformedInputException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 
 public class GUIController {
 
@@ -169,10 +172,8 @@ public class GUIController {
             items.add(fileName);
 
         } catch (ObjReaderException | IOException | IncorrectFileException exception) {
-            //todo: catch MalformedInputException СРОЧНО
             showErrorDialog(exception.getMessage());
         }
-
     }
 
     @FXML
@@ -188,6 +189,7 @@ public class GUIController {
 
         try {
             ObjWriter.write(fileName, selectedModel);
+            showSaveModelDialog();
         } catch (ObjWriterException exception) {
             showErrorDialog(exception.getMessage());
         }
@@ -313,11 +315,71 @@ public class GUIController {
         currentMouseCoordinates.setA((float) mouseDragEvent.getX());
         currentMouseCoordinates.setB((float) mouseDragEvent.getY());
     }
+    
+    @FXML
+    private void deletePolygons() {
+
+        int from, count;
+        boolean freeVert;
+
+        try {
+            from = Integer.parseInt(polygonsFrom.getText());
+            count = Integer.parseInt(polygonsCount.getText());
+            freeVert = freeVertices.isSelected();
+        } catch (NullPointerException | IllegalArgumentException | IndexOutOfBoundsException exception) {
+            showErrorDialog("Incorrect input: " + exception.getMessage());
+            return;
+        }
+
+        int len = from + count;
+        ArrayList<Integer> list = new ArrayList<>();
+        try {
+            for (int i = from; i < len; i++) {
+                list.add(i);
+            }
+            selectedModel = PolygonsDeleter.deletePolygons(selectedModel, list, freeVert);
+        } catch (IndexOutOfBoundsException | NullModelException exception) {
+            showErrorDialog(exception.getMessage());
+        }
+    }
+
+    @FXML
+    private void deleteVertices() {
+
+        int from, count;
+
+        try {
+            from = Integer.parseInt(verticesFrom.getText());
+            count = Integer.parseInt(verticesCount.getText());
+        } catch (NullPointerException | IllegalArgumentException | IndexOutOfBoundsException exception) {
+            showErrorDialog("Incorrect input: " + exception.getMessage());
+            return;
+        }
+
+        int len = from + count;
+        ArrayList<Integer> list = new ArrayList<>();
+        try {
+            for (int i = from; i < len; i++) {
+                list.add(i);
+            }
+            selectedModel = VerticesDeleter.removeVerticesFromModel(selectedModel, list);
+        } catch (IndexOutOfBoundsException | NullModelException exception) {
+            showErrorDialog(exception.getMessage());
+        }
+    }
+
     private void showErrorDialog(String e) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
         alert.setHeaderText("An error has occurred!");
         alert.setContentText(e);
+        alert.showAndWait();
+    }
+
+    private void showSaveModelDialog() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Info");
+        alert.setHeaderText("You saved the model");
         alert.showAndWait();
     }
 }
