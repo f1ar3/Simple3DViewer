@@ -1,6 +1,5 @@
 package com.cgvsu.Math.Vectors;
 
-/** @author <a href="https://github.com/valyalshikovd/LinearAlgebra">Валяльщиков Дмитрий Алексеевич</a> */
 public class TwoDimensionalVector extends NDimensionalVector  {
 
     private  double a;

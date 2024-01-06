@@ -7,8 +7,6 @@ import com.cgvsu.Math.Vectors.Vector;
 import java.util.Arrays;
 
 import static java.lang.Math.abs;
-
-/** @author <a href="https://github.com/valyalshikovd/LinearAlgebra">Валяльщиков Дмитрий Алексеевич</a> */
 public class NDimensionalMatrix implements Matrix {
     protected int dimensional;
     protected Vector[] matrixInVectors;

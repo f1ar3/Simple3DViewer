@@ -3,7 +3,6 @@ package com.cgvsu.Math.Vectors;
 
 import java.util.List;
 
-/** @author <a href="https://github.com/valyalshikovd/LinearAlgebra">Валяльщиков Дмитрий Алексеевич</a> */
 public class ThreeDimensionalVector extends NDimensionalVector{
 
     private double a;
