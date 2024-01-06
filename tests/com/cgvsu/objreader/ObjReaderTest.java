@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/** @author <a href="https://github.com/arda-sketch/CG3.ObjReader">Артамонов Артём Артурович</a> */
+
 class ObjReaderTest {
 
     @Test
