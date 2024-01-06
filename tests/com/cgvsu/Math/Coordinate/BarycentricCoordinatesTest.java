@@ -1,5 +1,6 @@
 package com.cgvsu.Math.Coordinate;
 
+import static org.junit.Assert.*;
 import com.cgvsu.Math.Vectors.TwoDimensionalVector;
 import org.junit.Test;
 
@@ -46,7 +47,7 @@ public class BarycentricCoordinatesTest {
         BarycentricCoordinates coordC = new BarycentricCoordinates(a, b, c, c);
         assertBarycentricCoordinates(coordC, 0, 0, 1);
     }
-    private void assertBarycentricCoordinates(BarycentricCoordinates coordinates, double expectedU, double expectedV, double expectedW) {
+    public void assertBarycentricCoordinates(BarycentricCoordinates coordinates, double expectedU, double expectedV, double expectedW) {
         final double DELTA = 0.0001;
         assertEquals(expectedU, coordinates.getU(), DELTA);
         assertEquals(expectedV, coordinates.getV(), DELTA);

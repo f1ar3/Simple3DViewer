@@ -34,24 +34,41 @@
     "Application.HelloApplication.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.Simple3DViewer.executor": "Run",
+    "JUnit.BarycentricCoordinatesTest (1).executor": "Run",
+    "JUnit.BarycentricCoordinatesTest.executor": "Run",
+    "JUnit.BarycentricCoordinatesTest.testSumOfCoordinates.executor": "Run",
+    "JUnit.BarycentricCoordinatesTest.testValidCoordinates.executor": "Run",
+    "JUnit.GraphicConveyorTest (1).executor": "Run",
+    "JUnit.GraphicConveyorTest.executor": "Run",
+    "JUnit.MatrixTest.executor": "Run",
+    "JUnit.ObjReaderTest.executor": "Run",
+    "JUnit.ObjWriterTest.executor": "Run",
+    "JUnit.ObjWriterTest.testWrite.executor": "Run",
+    "JUnit.ObjWriterTest.testWriteVertices.executor": "Run",
+    "JUnit.VectorTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/goshaapolonov/IdeaProjects/3DViewer/src/main/java/com/cgvsu",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
+    "last_directory_selection": "/Users/goshaapolonov/IdeaProjects/3DViewer/src/main/java/com/cgvsu/Math/Coordinate",
+    "last_opened_file_path": "/Users/goshaapolonov/IdeaProjects/3DViewer/tests/com/cgvsu",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.JavaFX"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/com/cgvsu" />
+      <recent name="$PROJECT_DIR$/tests/com/cgvsu/render_engine/graphicConveyor" />
       <recent name="$PROJECT_DIR$/src/main/java/com/cgvsu" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
-      <recent name="$PROJECT_DIR$/src/main/resources/com/cgvsu" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.cgvsu.Math.Coordinate" />
+      <recent name="com.cgvsu.Math" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.cgvsu" />
@@ -71,15 +88,81 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Simple3DViewer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cgvsu.Simple3DViewer" />
+    <configuration name="BarycentricCoordinatesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Simple3DViewer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cgvsu.*" />
+          <option name="PATTERN" value="com.cgvsu.Math.Coordinate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.cgvsu.Math.Coordinate" />
+      <option name="MAIN_CLASS_NAME" value="com.cgvsu.Math.Coordinate.BarycentricCoordinatesTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BarycentricCoordinatesTest.testSumOfCoordinates" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Simple3DViewer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cgvsu.Math.Coordinate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cgvsu.Math.Coordinate" />
+      <option name="MAIN_CLASS_NAME" value="com.cgvsu.Math.Coordinate.BarycentricCoordinatesTest" />
+      <option name="METHOD_NAME" value="testSumOfCoordinates" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GraphicConveyorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Simple3DViewer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cgvsu.render_engine.graphicConveyor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cgvsu.render_engine.graphicConveyor" />
+      <option name="MAIN_CLASS_NAME" value="com.cgvsu.render_engine.graphicConveyor.GraphicConveyorTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GraphicConveyorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Simple3DViewer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cgvsu.graphicConveyor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cgvsu.render_engine.graphicConveyor" />
+      <option name="MAIN_CLASS_NAME" value="com.cgvsu.render_engine.graphicConveyor.GraphicConveyorTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ObjWriterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Simple3DViewer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cgvsu.objwriter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cgvsu.objwriter" />
+      <option name="MAIN_CLASS_NAME" value="com.cgvsu.objwriter.ObjWriterTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -97,10 +180,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.BarycentricCoordinatesTest" />
+      <item itemvalue="JUnit.BarycentricCoordinatesTest.testSumOfCoordinates" />
+      <item itemvalue="JUnit.GraphicConveyorTest" />
+      <item itemvalue="JUnit.ObjWriterTest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Simple3DViewer" />
+        <item itemvalue="JUnit.GraphicConveyorTest" />
+        <item itemvalue="JUnit.BarycentricCoordinatesTest.testSumOfCoordinates" />
+        <item itemvalue="JUnit.BarycentricCoordinatesTest" />
+        <item itemvalue="JUnit.GraphicConveyorTest" />
       </list>
     </recent_temporary>
   </component>

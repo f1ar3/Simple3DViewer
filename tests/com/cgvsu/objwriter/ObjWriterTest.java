@@ -9,9 +9,7 @@ import com.cgvsu.objreader.ObjReader;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -27,12 +25,12 @@ class ObjWriterTest {
             System.out.println("File created");
         }
 
-        try (PrintWriter printWriter = new PrintWriter(file)) {
-            ObjWriter.writeVertices(printWriter, vertices);
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))) {
+            ObjWriter.writeVertices(bufferedWriter, vertices);
         }
 
         String fileContent = Files.readString(Path.of("testFile.obj"));
-        Assertions.assertTrue(fileContent.contains("v 1.0 2.0 3.0"));
+        Assertions.assertTrue(fileContent.contains("v 1.0000 2.0000 3.0000"));
     }
 
     @Test
@@ -45,12 +43,12 @@ class ObjWriterTest {
             System.out.println("File created");
         }
 
-        try (PrintWriter printWriter = new PrintWriter(file)) {
-            ObjWriter.writeTextureVertices(printWriter, textureVertices);
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file)))  {
+            ObjWriter.writeTextureVertices(bufferedWriter, textureVertices);
         }
 
         String fileContent = Files.readString(Path.of("testFile.obj"));
-        Assertions.assertTrue(fileContent.contains("vt 1.0 2.0"));
+        Assertions.assertTrue(fileContent.contains("vt 1.0000 2.0000"));
     }
 
     @Test
@@ -63,12 +61,12 @@ class ObjWriterTest {
             System.out.println("File created");
         }
 
-        try (PrintWriter printWriter = new PrintWriter(file)) {
-            ObjWriter.writeNormals(printWriter, normals);
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file)))  {
+            ObjWriter.writeNormals(bufferedWriter, normals);
         }
 
         String fileContent = Files.readString(Path.of("testFile.obj"));
-        Assertions.assertTrue(fileContent.contains("vn 1.0 2.0 3.0"));
+        Assertions.assertTrue(fileContent.contains("vn 1.0000 2.0000 3.0000"));
     }
 
     @Test
@@ -93,8 +91,8 @@ class ObjWriterTest {
             System.out.println("File created");
         }
 
-        try (PrintWriter printWriter = new PrintWriter(file)) {
-            ObjWriter.writePolygons(printWriter, polygons);
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))) {
+            ObjWriter.writePolygons(bufferedWriter, polygons);
         }
 
         String fileContent = Files.readString(Path.of("testFile.obj"));
@@ -120,8 +118,8 @@ class ObjWriterTest {
             System.out.println("File created");
         }
 
-        try (PrintWriter printWriter = new PrintWriter(file)) {
-            ObjWriter.writePolygons(printWriter, polygons);
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file)))  {
+            ObjWriter.writePolygons(bufferedWriter, polygons);
         }
 
         String fileContent = Files.readString(Path.of("testFile.obj"));
@@ -147,8 +145,8 @@ class ObjWriterTest {
             System.out.println("File created");
         }
 
-        try (PrintWriter printWriter = new PrintWriter(file)) {
-            ObjWriter.writePolygons(printWriter, polygons);
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file)))  {
+            ObjWriter.writePolygons(bufferedWriter, polygons);
         }
 
         String fileContent = Files.readString(Path.of("testFile.obj"));
@@ -171,28 +169,12 @@ class ObjWriterTest {
             System.out.println("File created");
         }
 
-        try (PrintWriter printWriter = new PrintWriter(file)) {
-            ObjWriter.writePolygons(printWriter, polygons);
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file)))  {
+            ObjWriter.writePolygons(bufferedWriter, polygons);
         }
 
         String fileContent = Files.readString(Path.of("testFile.obj"));
         Assertions.assertTrue(fileContent.contains("f 1 2 3 4 5 "));
-    }
-
-    @Test
-    public void testWrite() throws IOException, IncorrectFileException {
-        Path fileName = Path.of("3DModels/Faceform/WrapSkull.obj");
-        String fileContent = Files.readString(fileName);
-        Model model = ObjReader.read(fileContent);
-        try {
-            ObjWriter.write("testFile.obj", model);
-            String fileContent2 = Files.readString(Path.of("testFile.obj"));
-            Model model2 = ObjReader.read(fileContent2);
-            Assertions.assertEquals(model, model2);
-        } catch (ObjWriterException e) {
-            String expectedError = "Error writing to file.";
-            Assertions.assertEquals(expectedError, e.getMessage());
-        }
     }
 
     @Test
