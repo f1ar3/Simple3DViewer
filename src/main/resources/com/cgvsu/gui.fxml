@@ -227,28 +227,29 @@
                                 <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="415.0">
                                         <children>
-                                            <TextField fx:id="polygonsFrom1" layoutX="17.0" layoutY="27.0"
+                                            <TextField fx:id="polygonsFrom" layoutX="17.0" layoutY="27.0"
                                                        prefHeight="25.0" prefWidth="50.0"/>
-                                            <TextField fx:id="polygonsCount1" layoutX="88.0" layoutY="26.0"
+                                            <TextField fx:id="polygonsCount" layoutX="88.0" layoutY="26.0"
                                                        prefHeight="25.0" prefWidth="50.0"/>
                                             <Button layoutX="277.0" layoutY="26.0" minWidth="55.0"
                                                     mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0"
-                                                    text="Polygons"/>
+                                                    onAction="#deletePolygons" text="Polygons"/>
                                             <Button layoutX="277.0" layoutY="66.0" mnemonicParsing="false"
-                                                    prefHeight="25.0" prefWidth="101.0" text="Vertices"/>
-                                            <TextField fx:id="verticesFrom1" layoutX="18.0" layoutY="65.0"
+                                                    prefHeight="25.0" prefWidth="101.0"
+                                                    onAction="#deleteVertices" text="Vertices"/>
+                                            <TextField fx:id="verticesFrom" layoutX="18.0" layoutY="65.0"
                                                        prefHeight="25.0" prefWidth="50.0"/>
-                                            <TextField fx:id="verticesCount1" layoutX="88.0" layoutY="66.0"
+                                            <TextField fx:id="verticesCount" layoutX="88.0" layoutY="66.0"
                                                        prefHeight="25.0" prefWidth="50.0"/>
                                             <Text layoutX="26.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0"
                                                   text="From"/>
                                             <Text layoutX="96.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0"
                                                   text="Count"/>
-                                            <CheckBox fx:id="freeVertices1" layoutX="162.0" layoutY="28.0"
+                                            <CheckBox fx:id="freeVertices" layoutX="162.0" layoutY="28.0"
                                                       mnemonicParsing="false" prefHeight="18.0" prefWidth="92.0"
                                                       text="free vertices"/>
                                             <Button layoutX="150.0" layoutY="101.0" mnemonicParsing="false"
-                                                    prefHeight="35.0" prefWidth="110.0" text="Save model"/>
+                                                    prefHeight="35.0" prefWidth="110.0" onAction="#onSaveModelMenuItemClick" text="Save model"/>
                                         </children>
                                     </AnchorPane>
                                 </content>
