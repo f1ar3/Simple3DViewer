@@ -315,6 +315,16 @@ public class GUIController {
         currentMouseCoordinates.setA((float) mouseDragEvent.getX());
         currentMouseCoordinates.setB((float) mouseDragEvent.getY());
     }
+
+    @FXML
+    public void canvasDragDroppedGetValue() {
+        isRotationActive = false;
+    }
+
+    @FXML
+    public void canvasDragEnterGetValue() {
+        isRotationActive = true;
+    }
     
     @FXML
     private void deletePolygons() {
