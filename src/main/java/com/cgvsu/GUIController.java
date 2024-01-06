@@ -2,10 +2,13 @@ package com.cgvsu;
 
 import com.cgvsu.Math.Vectors.ThreeDimensionalVector;
 import com.cgvsu.Math.Vectors.TwoDimensionalVector;
+import com.cgvsu.exceptions.NullModelException;
 import com.cgvsu.model.Model;
 import com.cgvsu.objreader.IncorrectFileException;
 import com.cgvsu.objreader.ObjReader;
 import com.cgvsu.objreader.ObjReaderException;
+import com.cgvsu.objwriter.ObjWriter;
+import com.cgvsu.objwriter.ObjWriterException;
 import com.cgvsu.render_engine.RenderEngine;
 import com.cgvsu.render_engine.camera.Camera;
 import com.cgvsu.render_engine.camera.CameraController;
@@ -170,6 +173,55 @@ public class GUIController {
             showErrorDialog(exception.getMessage());
         }
 
+    }
+
+    @FXML
+    private void onSaveModelMenuItemClick() {
+
+        String fileName;
+        try {
+            fileName = selectedModel.getPath();
+        } catch (NullPointerException | NullModelException exception) {
+            showErrorDialog(exception.getMessage());
+            return;
+        }
+
+        try {
+            ObjWriter.write(fileName, selectedModel);
+        } catch (ObjWriterException exception) {
+            showErrorDialog(exception.getMessage());
+        }
+    }
+
+    @FXML
+    private void onSaveModelAsMenuItemClick() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Model (*.obj)", "*.obj"));
+        fileChooser.setTitle("Save model");
+
+        File file = fileChooser.showSaveDialog(canvas.getScene().getWindow());
+        if (file == null) {
+            return;
+        }
+
+        String fileName = file.getAbsolutePath();
+
+        try {
+            ObjWriter.write(fileName, selectedModel);
+        } catch (ObjWriterException exception) {
+            showErrorDialog(exception.getMessage());
+        }
+    }
+
+    @FXML
+    private void onDeleteMenuItemClick() {
+        try {
+            renderEngine.getModels().remove(selectedModel.getPath());
+            items.remove(selectedModel.getPath());
+            selectedModel = renderEngine.getModels().values().stream().reduce((first, second) -> second).orElse(null);
+        } catch (NullPointerException exception) {
+            showErrorDialog(exception.getMessage());
+        }
     }
 
     private void handleModelSelection(String modelName) {
