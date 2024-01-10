@@ -38,7 +38,7 @@ public class AffineTransformation {
                 new NDimensionalVector(cosY * cosZ,-cosX * sinZ + sinX * sinY * cosZ ,sinX * sinZ + cosX * sinY * cosZ, 0),
                 new NDimensionalVector( cosY * sinZ,cosX * cosZ + sinX * sinY * sinZ,-sinX * cosZ + cosX * sinY * sinZ, 0 ),
                 new NDimensionalVector(-sinY, sinX * cosY, cosX * cosY, 0),
-                new NDimensionalVector(0, 0,0,1)
+                new NDimensionalVector(0, 0,0, 1)
         );
 
         return rotationMatrix;

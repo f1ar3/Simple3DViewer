@@ -1,0 +1,33 @@
+/*.tab-pane *.tab-header-area *.tab-header-background {*/
+/*    -fx-background-color: #817b7b;*/
+/*}*/
+
+.anchor-pane {
+    -fx-background-color: #818080;
+}
+
+.list-view {
+    -fx-control-inner-background: #817b7b;
+}
+
+.list-view .list-cell {
+    -fx-text-fill: #ffffff;
+}
+
+.tab-pane {
+    -fx-background-color: #817b7b;
+}
+
+.text{
+    -fx-text-fill: #ffffff;
+}
+
+.tab-pane .label {
+    -fx-text-fill: #ffffff;
+    -fx-highlight-text-fill: #cfe811;
+}
+
+.check-box {
+    -fx-text-fill: #ffffff;
+}
+

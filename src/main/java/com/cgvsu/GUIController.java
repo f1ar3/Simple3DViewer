@@ -37,6 +37,8 @@ import java.util.ArrayList;
 public class GUIController {
 
     final private float TRANSLATION = 1F;
+    @FXML
+    public TabPane tabPane1;
 
     @FXML
     private ListView<String> viewModels = new ListView<>();
@@ -52,6 +54,12 @@ public class GUIController {
 
     @FXML
     private Canvas canvas;
+
+    @FXML
+    private RadioMenuItem light;
+
+    @FXML
+    private RadioMenuItem night;
 
     private RenderEngine renderEngine;
 
@@ -89,6 +97,28 @@ public class GUIController {
         renderEngine = new RenderEngine(canvas.getGraphicsContext2D(), camera, (int) canvas.getWidth(), (int) canvas.getHeight());
 
         renderEngine.setCameraController(new CameraController(camera, TRANSLATION));
+
+        ToggleGroup toggleGroup = new ToggleGroup();
+        night.setToggleGroup(toggleGroup);
+        light.setToggleGroup(toggleGroup);
+
+        toggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue == night) {
+                light.setSelected(false);
+                night.setSelected(true);
+
+                anchorPane.getStylesheets().clear();
+
+                anchorPane.getStylesheets().add(getClass().getResource("night-theme.css").toExternalForm());
+                anchorPane.setStyle("-fx-background-color: #818080;");
+            } else if (newValue == light) {
+                light.setSelected(true);
+                night.setSelected(false);
+
+                anchorPane.getStylesheets().clear();
+                anchorPane.setStyle("-fx-background-color: #ffffff");
+            }
+        });
 
         KeyFrame frame = new KeyFrame(Duration.millis(33), event -> {
             renderEngine.setWidth((int) canvas.getWidth());

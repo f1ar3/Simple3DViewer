@@ -13,9 +13,8 @@ public class PolygonsDeleter {
         if (model == null || model.isEmpty()) {
             throw new NullModelException();
         }
-        Comparator<Integer> comparator = Comparator.reverseOrder();
-        //listNumbers.sort(comparator);
-        List<Polygon> deletedPolygons= new ArrayList<>();
+
+        List<Polygon> deletedPolygons = new ArrayList<>();
         for(Integer index : listNumbers){
             deletedPolygons.add(model.getPolygons().get(index));
         }

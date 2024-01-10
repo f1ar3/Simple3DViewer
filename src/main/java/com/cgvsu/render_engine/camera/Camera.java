@@ -49,15 +49,14 @@ public class Camera {
         return target;
     }
 
-    // в отдельный
     public void movePosition(final ThreeDimensionalVector translation) {
-        this.position = addAndConvertToThreeDimensionalVector(this.position, this.position.addition(translation));
+        this.position = addAndConvertToThreeDimensionalVector(this.position.addition(translation));
     }
 
     public void moveTarget(final ThreeDimensionalVector translation) {
-        this.target = addAndConvertToThreeDimensionalVector(this.target, this.target.addition(translation));
+        this.target = addAndConvertToThreeDimensionalVector(this.target.addition(translation));
     }
-    private ThreeDimensionalVector addAndConvertToThreeDimensionalVector(ThreeDimensionalVector original, Vector additionResult) {
+    private ThreeDimensionalVector addAndConvertToThreeDimensionalVector(Vector additionResult) {
         double[] tmp = additionResult.getArrValues();
         return new ThreeDimensionalVector(tmp[0], tmp[1], tmp[2]);
     }
@@ -72,7 +71,7 @@ public class Camera {
 
     }
     public NDimensionalMatrix getViewMatrix() {
-        return GraphicConveyor.lookAt(position,target);
+        return GraphicConveyor.lookAt(position, target);
     }
 
     public NDimensionalMatrix getProjectionMatrix() {

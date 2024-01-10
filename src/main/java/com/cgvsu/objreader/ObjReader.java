@@ -25,7 +25,7 @@ public class ObjReader {
 		Scanner scanner = new Scanner(fileContent);
 		while (scanner.hasNextLine()) {
 			final String line = scanner.nextLine();
-			ArrayList<String> wordsInLine = new ArrayList<String>(Arrays.asList(line.trim().split("\\s+")));
+			ArrayList<String> wordsInLine = new ArrayList<>(Arrays.asList(line.trim().split("\\s+")));
 			if (wordsInLine.isEmpty()) {
 				continue;
 			}
@@ -55,7 +55,6 @@ public class ObjReader {
 		return new Model(vertices, textureVertices, normals, polygons);
 	}
 
-	// Всем методам кроме основного я поставил модификатор доступа protected, чтобы обращаться к ним в тестах
 	protected static ThreeDimensionalVector parseVertex(final ArrayList<String> wordsInLineWithoutToken, int lineInd) {
 		if (wordsInLineWithoutToken.size()>3){
 			throw new ObjReaderException("Too many vertex arguments.", lineInd);

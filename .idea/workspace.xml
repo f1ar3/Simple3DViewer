@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="166dfb5e-f145-434c-9019-64becd1b0d2b" name="Changes" comment="" />
+    <list default="true" id="166dfb5e-f145-434c-9019-64becd1b0d2b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/cgvsu/night-theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cgvsu/GUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/GUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cgvsu/Math/AffineTransformation/AffineTransformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/Math/AffineTransformation/AffineTransformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cgvsu/deleter/PolygonsDeleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/deleter/PolygonsDeleter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cgvsu/model/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/model/Polygon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cgvsu/objreader/ObjReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/objreader/ObjReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cgvsu/render_engine/Shadow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cgvsu/render_engine/camera/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/render_engine/camera/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cgvsu/render_engine/graphicConveyor/GraphicConveyor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgvsu/render_engine/graphicConveyor/GraphicConveyor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/cgvsu/gui.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/cgvsu/gui.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/cgvsu/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/cgvsu/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cgvsu/GUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cgvsu/GUIController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cgvsu/Simple3DViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cgvsu/Simple3DViewer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cgvsu/exceptions/IncorrectInputException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cgvsu/gui.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cgvsu/gui.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cgvsu/objwriter/ObjWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cgvsu/objwriter/ObjWriter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,22 +50,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Simple3DViewer.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/goshaapolonov/IdeaProjects/3DViewer/src/main/java/com/cgvsu",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Simple3DViewer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BarycentricCoordinatesTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MatrixTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Simple3DViewer [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Simple3DViewer [clean...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Simple3DViewer [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.ide.FileNotInSourceRootChecker.no.check&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/goshaapolonov/IdeaProjects/Simple3DViewer&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/cgvsu" />
@@ -56,6 +90,13 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.cgvsu" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn clean package" />
+      <command value="mvn clean -Dmaven.clean.failOnError=false compile assembly:single -DskipTests=true" />
+    </option>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -84,15 +125,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="3DViewer" />
+    <configuration name="BarycentricCoordinatesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Simple3DViewer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cgvsu.Math.Coordinate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cgvsu.Math.Coordinate" />
+      <option name="MAIN_CLASS_NAME" value="com.cgvsu.Math.Coordinate.BarycentricCoordinatesTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="3DViewer" />
-      <option name="filePath" />
+    <configuration name="MatrixTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Simple3DViewer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cgvsu.Math.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cgvsu.Math" />
+      <option name="MAIN_CLASS_NAME" value="com.cgvsu.Math.MatrixTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,6 +158,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.MatrixTest" />
+        <item itemvalue="JUnit.BarycentricCoordinatesTest" />
         <item itemvalue="Application.Simple3DViewer" />
       </list>
     </recent_temporary>
@@ -107,7 +167,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-8336523bb0d9-55c9c8bc" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-2f79fb23" />
       </set>
     </attachedChunks>
   </component>
@@ -119,8 +179,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1704477105794</updated>
+      <workItem from="1704587662033" duration="1132000" />
+      <workItem from="1704624479796" duration="1475000" />
+      <workItem from="1704633947554" duration="861000" />
+      <workItem from="1704646133019" duration="4784000" />
+      <workItem from="1704669443559" duration="1360000" />
+      <workItem from="1704712304908" duration="113000" />
+      <workItem from="1704712793773" duration="11000" />
+      <workItem from="1704712822137" duration="5087000" />
+      <workItem from="1704747405531" duration="1931000" />
+      <workItem from="1704750575142" duration="990000" />
+      <workItem from="1704782177560" duration="651000" />
+      <workItem from="1704788891757" duration="46000" />
+      <workItem from="1704788951118" duration="2752000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -132,5 +208,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

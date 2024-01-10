@@ -129,5 +129,5 @@ public class GraphicConveyor {
 
     public static Point2f vertexToPoint(final ThreeDimensionalVector vertex, final int width, final int height) {
         return new Point2f((float) (vertex.getA() * width + width / 2.0F), (float) (-vertex.getB() * height + height / 2.0F));
-    } // TODO: исправить костыль
+    }
 }
